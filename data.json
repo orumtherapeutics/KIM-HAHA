@@ -1,0 +1,29 @@
+{
+    "user": {
+        "name": "김하하",
+        "bank": "키움증권",
+        "accountNumber": "1234-5678",
+        "stockPricePerShare": 36000,
+        "sharesOwned": 500
+    },
+    "contact": {
+        "phone": "010-1234-5678"
+    },
+    "news": [
+        {
+            "title": "이승주 오름테라퓨틱 대표 '대통령 표창'",
+            "date": "2024년 11월 18일",
+            "url": "https://www.jbnews.com/news/articleView.html?idxno=1458771"
+        },
+        {
+            "title": "[현장] 2024년 신약 개발 주요 트렌드 ‘ADC·TPD’와 ‘AI’가 주도",
+            "date": "2024년 11월 6일",
+            "url": "https://mydaily.co.kr/page/view/2024110614330829587"
+        },
+        {
+            "title": "'ADC+TPD 개발사' 오름테라퓨틱, 코스닥 상장예심 통과",
+            "date": "2024년 9월 29일",
+            "url": "http://www.hitnews.co.kr/news/articleView.html?idxno=57860"
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="오름테라퓨틱">
+    <meta property="og:image" content="https://i.ibb.co/fpK2pd8/image.png">
+    <meta property="og:description" content="Orum Therapeutics">
+    <link rel="icon" href="https://i.ibb.co/0y0GyVz/favicon.png" type="image/png">
+    <title>Orum Therapeutics</title>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 로고 이미지 -->
+    <a href="index.html">
+        <img src="https://i.ibb.co/PcCvTDv/2.png" alt="사이트 로고" class="logo">
+    </a>
+
+    <!-- 메인 헤더 -->
+    <header class="header" data-bg="https://i.ibb.co/Hdx6Dnz/image.png">
+        <h1>새로운 차원으로 도약</h1>
+        <p>임상 단계의 생명공학 기업이<br>새로운 종류의 ADC를 개척합니다.</p>
+    </header>
+
+    <!-- 추가 헤더 섹션 1 -->
+    <section class="header-section" data-bg="https://i.ibb.co/VqWv90d/image.png">
+        <h2 id="user-name">보유주수 확인</h2>
+        <p>하단의 버튼을 눌러 증권 보유내역을 확인해 주세요.</p>
+        <a href="account.html">
+            <img src="https://i.ibb.co/QpRHDRt/image.png" alt="보유주수 확인" class="btn-img animated-btn">
+        </a>
+    </section>
+
+<!-- 가이드북 섹션 추가 -->
+<section class="header-section" data-bg="https://i.ibb.co/q0GR4JK/image.png">
+    <h2>가이드북</h2>
+    <p>하단의 버튼을 눌러 오름이 제공하는<br>고도로 차별화된 제품 포트폴리오와<br>모델링, 연구, 개발, 조직도를 확인하세요.</p>
+    <a href="https://online.fliphtml5.com/bdnqc/rdsa/" target="_blank">
+        <img src="https://i.ibb.co/23W3pVt/2.png" alt="가이드북 보기" class="btn-img-small">
+    </a>
+</section>
+
+    <!-- 뉴스 섹션 -->
+    <section class="header-section" data-bg="https://i.ibb.co/2vHky4m/image.png">
+        <h1>뉴스</h1>
+        <div id="news-container"></div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-text">
+            <a href="#" id="contact-link" class="contact-link">문의하기</a>
+        </div>
+        <div class="footer-text">
+            <a href="terms-of-use.html" class="terms-link">이용약관</a>
+        </div>
+        <div class="footer-text">
+            <a href="privacy.html" class="privacy-link">개인정보 보호</a>
+        </div>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/company/orum-therapeutics" target="_blank">
+                <img src="https://i.ibb.co/WcKMTVs/image.png" alt="아이콘 1" class="footer-icon">
+            </a>
+            <a href="https://x.com/orumrx" target="_blank">
+                <img src="https://i.ibb.co/k48MVgG/image.png" alt="아이콘 2" class="footer-icon">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // 데이터 파일 불러오기
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                // 보유주수 확인 이름 업데이트
+                document.getElementById('user-name').textContent = `${data.user.name}님의 보유주수 확인`;
+
+                // 뉴스 항목 추가
+                const newsContainer = document.getElementById('news-container');
+                data.news.forEach(newsItem => {
+                    const newsElement = document.createElement('a');
+                    newsElement.href = newsItem.url;
+                    newsElement.classList.add('news-item');
+                    newsElement.innerHTML = `
+                        <div class="news-title">${newsItem.title}</div>
+                        <div class="news-date">${newsItem.date}</div>`;
+                    newsContainer.appendChild(newsElement);
+                });
+
+                // 문의하기 링크에 전화번호 적용
+                document.getElementById('contact-link').href = `tel:${data.contact.phone}`;
+            })
+            .catch(error => console.error('Error loading data.json:', error));
+
+        // 배경 이미지 위치 업데이트 함수
+        function updateBackgroundPosition() {
+            const sections = document.querySelectorAll('.header, .header-section');
+            const scrollPosition = window.scrollY;
+            sections.forEach(section => {
+                const speed = 0.1;
+                section.style.backgroundImage = `url(${section.getAttribute('data-bg')})`;
+                section.style.backgroundPosition = `center ${-(scrollPosition * speed)}px`;
+            });
+        }
+
+        // 스크롤 이벤트 추가
+        window.addEventListener('scroll', updateBackgroundPosition);
+        updateBackgroundPosition();
+    </script>
+
+</body>
+</html>

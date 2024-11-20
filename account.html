@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="오름테라퓨틱">
+    <meta property="og:image" content="https://i.ibb.co/fpK2pd8/image.png">
+    <meta property="og:description" content="Orum Therapeutics">
+    <link rel="icon" href="https://i.ibb.co/0y0GyVz/favicon.png" type="image/png">
+    <title>Orum Therapeutics</title>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet">
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <!-- 로고 -->
+    <a href="index.html">
+        <img src="https://i.ibb.co/PcCvTDv/2.png" alt="사이트 로고" class="logo">
+    </a>
+
+    <!-- 상단 헤더 -->
+    <section class="top-header">
+        <h1>오름과 함께 해주셔서 감사합니다</h1>
+        <p>함께 성장하실 주주님의 앞날을 축원합니다.</p>
+    </section>
+
+    <!-- 계좌 요약 -->
+    <section class="account-summary">
+        <div class="summary-header">
+            <img src="https://i.ibb.co/XCv0RDs/image.png" alt="작은 이미지" class="small-image">
+            <div class="user-info">
+                <h2 id="user-name">주주 정보 로딩 중...</h2>
+                <p id="stock-price">가격 정보 로딩 중...</p>
+            </div>
+        </div>
+        <div class="financial-info">
+            <h3 id="evaluated-amount">로딩 중...</h3>
+            <p id="shares-owned">로딩 중...</p>
+            <button class="toggle-button">증권정보</button>
+            <div class="extra-info" id="extra-info">
+                <p><strong>증권명</strong>: 오름테라퓨틱</p>
+                <p><strong>기업코드</strong>: 475830</p>
+                <p><strong>기업구분</strong>: 벤처</p>
+                <p><strong>대표이사</strong>: 이승주</p>
+                <p><strong>사업자등록번호</strong>: 887-81-00503</p>
+                <p><strong>주권구분</strong>: 통일주권</p>
+                <p><strong>주간사</strong>: 한국투자증권</p>
+                <br>
+                <p>본 정보를 제공하는 한국예탁결제원은 [정보통신망 이용촉진 및 정보보호 등에 관한 법률] 및 [개인정보보호법] 등에 따라 정보주체의 개인정보 및 권익을 보호하고 있습니다.</p>
+                <br>
+                <p>&copy; KOREA SECURITIES DEPOSITORY</p>
+            </div>          
+        </div>
+    </section>
+
+    <!-- 계좌 카드 -->
+    <section class="account-card">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+            <h3 class="card-title">입고 예정 계좌</h3>
+            <p class="account-name" id="bank-name">[은행명]</p>
+            <p class="account-number" id="account-number">[계좌번호]</p>
+            <a href="#" class="request-change" id="change-account">본인의 증권계좌가 아니신가요?</a>
+        </div>
+    </section>
+
+    <!-- 팝업 오버레이 -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+            <p>본인의 증권계좌가 아니신가요?</p>
+            <button id="yes-button">문의하기</button>
+            <button id="no-button">돌아가기</button>
+        </div>
+    </div>
+
+    <section class="contact-tabs">
+        <div class="tabs">
+            <div class="tab active" data-tab="1">문의하기</div>
+            <div class="tab" data-tab="2">추가배정 신청</div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-panel active" id="panel-1">
+                <div class="responsive-iframe-container">
+                    <iframe src="https://tally.so/embed/wLEMjl?alignLeft=1&transparentBackground=1&dynamicHeight=1" class="responsive-iframe"></iframe>
+                </div>
+            </div>
+            <div class="tab-panel" id="panel-2">
+                <div class="responsive-iframe-container">
+                    <iframe src="https://tally.so/embed/mV91Oy?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" class="responsive-iframe"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>       
+
+    <!-- 뒤로가기 버튼 -->
+    <div class="back-button">
+        <a href="index.html">
+            <img src="https://i.ibb.co/mGRKpRv/image.png" alt="뒤로가기" class="back-button-img">
+        </a>
+    </div>
+
+    <div class="app-opening">
+        <div class="logo-box">
+            <img src="https://i.ibb.co/0y0GyVz/favicon.png" alt="로고" />
+        </div>
+    </div>
+    
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-text">
+            <a href="#" id="contact-link" class="contact-link">문의하기</a>
+        </div>
+        <div class="footer-text">
+            <a href="terms-of-use.html" class="terms-link">이용약관</a>
+        </div>
+        <div class="footer-text">
+            <a href="privacy.html" class="privacy-link">개인정보 보호</a>
+        </div>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/company/orum-therapeutics" target="_blank">
+                <img src="https://i.ibb.co/WcKMTVs/image.png" alt="아이콘 1" class="footer-icon">
+            </a>
+            <a href="https://x.com/orumrx" target="_blank">
+                <img src="https://i.ibb.co/k48MVgG/image.png" alt="아이콘 2" class="footer-icon">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // JSON 데이터 불러오기
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                // 사용자 정보와 금융 정보 업데이트
+                document.getElementById('user-name').textContent = `${data.user.name}님의 어카운트`;
+                document.getElementById('stock-price').textContent = `1주 = ${data.user.stockPricePerShare.toLocaleString()}원｜KOSDAQ`;
+                const evaluatedAmount = data.user.stockPricePerShare * data.user.sharesOwned;
+                document.getElementById('evaluated-amount').textContent = `${evaluatedAmount.toLocaleString()}원`;
+                document.getElementById('shares-owned').textContent = `${data.user.sharesOwned.toLocaleString()}주`;
+    
+                // 전화 링크 설정
+                document.getElementById('contact-link').href = `tel:${data.contact.phone}`;
+                
+                // 계좌 정보 업데이트
+                document.getElementById('bank-name').textContent = data.user.bank;
+                document.getElementById('account-number').textContent = data.user.accountNumber;
+            })
+            .catch(error => console.error('Error loading data.json:', error));
+    
+        // 계좌 변경 버튼 클릭 시 팝업 표시
+        document.getElementById('change-account').addEventListener('click', function(e) {
+            e.preventDefault();
+            const popupOverlay = document.getElementById('popup-overlay');
+            const popup = document.querySelector('.popup');
+            popupOverlay.style.display = 'flex';
+            setTimeout(() => {
+                popupOverlay.classList.add('show');
+                popup.classList.add('show');
+            }, 10);
+        });
+    
+        // 팝업에서 "문의하기" 버튼 클릭 시 전화 걸기
+        document.getElementById('yes-button').addEventListener('click', function() {
+            window.location.href = `tel:010-1234-5678`; // 전화 걸기
+        });
+    
+        // 팝업에서 "돌아가기" 버튼 클릭 시 팝업 숨기기
+        document.getElementById('no-button').addEventListener('click', function() {
+            const popupOverlay = document.getElementById('popup-overlay');
+            const popup = document.querySelector('.popup');
+            popup.classList.remove('show');
+            popupOverlay.classList.remove('show');
+            setTimeout(() => {
+                popupOverlay.style.display = 'none';
+            }, 300);
+        });
+    
+        // 팝업 오버레이 클릭 시 팝업 숨기기
+        document.getElementById('popup-overlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                const popupOverlay = document.getElementById('popup-overlay');
+                const popup = document.querySelector('.popup');
+                popup.classList.remove('show');
+                popupOverlay.classList.remove('show');
+                setTimeout(() => {
+                    popupOverlay.style.display = 'none';
+                }, 300);
+            }
+        });
+    
+        // "증권정보" 버튼 클릭 시 증권 정보 토글
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            const extraInfo = document.getElementById('extra-info');
+            extraInfo.style.maxHeight = extraInfo.classList.contains('open') ? '0' : '100px';
+            extraInfo.classList.toggle('open');
+        });
+    
+        // 탭 전환 처리
+        document.addEventListener("DOMContentLoaded", function() {
+            const tabs = document.querySelectorAll(".tab");  // 모든 탭 요소를 선택
+            const panels = document.querySelectorAll(".tab-panel");  // 모든 탭 패널을 선택
+            
+            let currentTab = 1;  // 현재 탭 번호 (기본값은 1)
+            
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function() {
+                    const targetTab = parseInt(tab.getAttribute("data-tab"));  // 클릭한 탭의 번호 가져오기
+                    if (currentTab === targetTab) return;  // 현재 탭과 클릭한 탭이 같으면 아무 일도 안 함
+            
+                    // 탭 상태 변경
+                    tabs.forEach(t => t.classList.remove("active"));  // 모든 탭에서 active 클래스 제거
+                    tab.classList.add("active");  // 클릭한 탭에 active 클래스 추가
+            
+                    // 탭 패널 전환 애니메이션 처리
+                    panels.forEach(panel => {
+                        panel.classList.remove("active", "show", "hidden", "hidden-prev");
+                        if (panel.id === "panel-" + targetTab) {
+                            panel.classList.add("active");
+                            panel.classList.add("show");
+                            
+                            // 탭 1을 클릭할 때 iframe을 다시 로드하도록 설정
+                            if (targetTab === 1) {
+                                const iframe = panel.querySelector("iframe");
+                                iframe.src = iframe.src;  // src를 다시 할당하여 로드
+                            }
+                        }
+                    });
+            
+                    // 현재 탭 번호 업데이트
+                    currentTab = targetTab;
+            
+                    // 슬라이드 전환 후 이전 패널 숨기기
+                    setTimeout(() => {
+                        panels.forEach(panel => {
+                            if (panel.id !== "panel-" + targetTab) {
+                                panel.classList.add("hidden");  // 현재 패널 제외한 다른 패널 숨기기
+                            }
+                        });
+                    }, 500);  // 슬라이드 애니메이션 시간 (500ms)
+                });
+            });
+        });
+
+        window.addEventListener('load', function () {
+    // 로딩 중 클래스 제거
+    setTimeout(() => {
+        document.body.classList.remove('loading');
+        const opening = document.querySelector('.app-opening');
+        if (opening) opening.remove(); // 오프닝 제거
+    }, 3500); // 총 3.5초 (페이드 인 + 유지 + 페이드 아웃)
+});
+
+    </script>    
+    
+</body>
+</html>
